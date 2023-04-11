@@ -1,99 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Comfortaa', cursive;
+  background-color: #cdb4db;
+}
+
 .login {
+  margin-top: 450px;
+  background-color: #bde0fe;
+  height: 50%;
+}
+
+.login-image {
+  margin-top: 10px;
+}
+
+.login-child {
+  margin: 5px;
+}
+
+.login-button {
+  margin: 5px;
+  width: 125px;
+}
+
+.register-button {
+  margin: 5px;
+  width: 165px;
+}
+
+.register {
+  margin-top: 450px;
+  padding: 5px;
+  background-color: #bde0fe;
+  height: 50%;
+}
+
+.navbar {
+  width: 1000px;
+}
+
+.navbar-btn {
+  height: 50px;
+  font-size: 25px;
+}
+
+.cards {
+  width: 500px;
+  height: 350px;
+}
+
+.group-cards {
+  width: 1000px;
+  height: 350px;
+}
+
+.image-drink {
+  width: 100px;
+}
+
+.btn-cart {
   font-size: 30px;
-  align-items: center;
-  background: #0fa36b;
-  color: #464646;
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
-  
-}
-input {
-  width: 390px;
-  height: 30px 
-  
-}
-
-input {
-  font-size: 25px; 
-}
-
-input::placeholder {
-  font-size: 20px; 
-}
-
-button {
-  width: 200px; 
-  height: 50px; 
-  font-size: 23px; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.App {
-  align-items: center;
-  background: #0fa36b;
-  color: #464646;
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
-}
-
-.App > .logo {
-  animation: shake 1.5s infinite ease;
-  color: aliceblue;
-  font-family: Montserrat , sans-serif;
-  font-size: 3em;
-  font-weight: 900;
-}
-
-.rocksGlass {
-  animation: shake 1s infinite ease;
-  max-height: 80vh;
-}
-
-@keyframes shake {
-
-  0% {
-    transform: rotate(5deg);
-  }
-
-  50% {
-    transform: rotate(-5deg);
-  }
-
-  100% {
-    transform: rotate(5deg);
-  }
-}
-
-@keyframes clink {
-
-  0% {
-    transform: rotate(-10deg);
-  }
-
-  50% {
-    transform: rotate(20deg);
-  }
-
-  100% {
-    transform: rotate(-10deg);
-  }
+  height: 55px;
+  margin-top: 75px;
+  margin-left: 900px;
 }

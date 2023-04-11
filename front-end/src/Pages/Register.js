@@ -45,38 +45,41 @@ function Register() {
   useEffect(() => verifyValues());
 
   return (
-    <>
+    <div className="d-flex flex-column align-items-center align-self-center register">
       <h1>Cadastro</h1>
       <label htmlFor="name">
-        Nome:
+        {'Nome: '}
         <input
           data-testid="common_register__input-name"
           type="text"
           name="name"
           placeholder="Digite seu nome"
           onChange={ onChangeForms }
+          className="rounded"
         />
       </label>
       <br />
       <label htmlFor="email">
-        E-mail:
+        {'E-mail: '}
         <input
           data-testid="common_register__input-email"
           type="email"
           name="email"
           placeholder="Digite seu email"
           onChange={ onChangeForms }
+          className="rounded"
         />
       </label>
       <br />
       <label htmlFor="password">
-        Senha:
+        {'Senha: '}
         <input
           data-testid="common_register__input-password"
           type="password"
           name="password"
           placeholder="Digite sua senha"
           onChange={ onChangeForms }
+          className="rounded"
         />
       </label>
       <br />
@@ -85,6 +88,7 @@ function Register() {
         type="button"
         onClick={ handleButton }
         disabled={ stateBtn }
+        className="btn btn-primary btn-lg"
       >
         Cadastre-se
       </button>
@@ -93,10 +97,10 @@ function Register() {
           <h3
             data-testid="common_register__element-invalid_register"
           >
-            Esse usuario ja existe
+            Esse usuário ja existe
           </h3>
         )}
-    </>
+    </div>
   );
 }
 

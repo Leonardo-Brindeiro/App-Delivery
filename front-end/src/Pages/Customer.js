@@ -25,22 +25,25 @@ function Customer() {
   }, []);
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center">
       <NavBar />
-      {products.map((ele) => (
-        <Cards
-          id={ ele.id }
-          key={ ele.id }
-          name={ ele.name }
-          price={ ele.price }
-          urlImage={ ele.urlImage }
-        />
-      ))}
+      <div className="d-flex flex-row flex-wrap group-cards">
+        {products.map((ele) => (
+          <Cards
+            id={ ele.id }
+            key={ ele.id }
+            name={ ele.name }
+            price={ ele.price }
+            urlImage={ ele.urlImage }
+          />
+        ))}
+      </div>
       <button
         data-testid="customer_products__button-cart"
         type="button"
         onClick={ handleClick }
         disabled={ totalPrice === '0.00' || totalPrice === 0 }
+        className="position-fixed btn btn-warning btn-cart"
       >
         <p data-testid="customer_products__checkout-bottom-value">
           { `${totalPrice}`.replace('.', ',') }

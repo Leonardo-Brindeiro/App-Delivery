@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Login from './Pages/Login';
-import './App.css';
 import Register from './Pages/Register';
 import Customer from './Pages/Customer';
 import Checkout from './Pages/Checkout';
@@ -10,6 +9,8 @@ import CustomerOrdersDetails from './Pages/CustomerOrdersDetails';
 import AdminManager from './Pages/AdminManager';
 import SellerOrders from './Pages/SellerOrders';
 import SellerOrdersDetails from './Pages/SellerOrdersDetails';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   return (

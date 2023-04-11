@@ -23,11 +23,12 @@ function NavBar() {
   };
 
   return (
-    <div className="products">
+    <div className="products d-inline-flex navbar">
       <button
         type="button"
         onClick={ onClickProducts }
         data-testid="customer_products__element-navbar-link-products"
+        className="w-25 navbar-btn btn btn-info"
       >
         Produtos
       </button>
@@ -35,18 +36,20 @@ function NavBar() {
         type="button"
         onClick={ onClickOrders }
         data-testid="customer_products__element-navbar-link-orders"
+        className="w-25 navbar-btn btn btn-info"
       >
         Meus Pedidos
       </button>
-      <h1
+      <h2
         data-testid="customer_products__element-navbar-user-full-name"
       >
         {userName}
-      </h1>
+      </h2>
       <button
         type="button"
         onClick={ onClickLogout }
         data-testid="customer_products__element-navbar-link-logout"
+        className="navbar-btn btn btn-danger"
       >
         Sair
       </button>

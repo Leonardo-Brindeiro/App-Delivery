@@ -47,6 +47,8 @@ export default function Cards({ name, price, urlImage, id }) {
     setQtdState(+value);
   };
 
+  const flex = 'd-flex flex-column align-items-center cards card justify-content-center';
+
   useEffect(() => {
     if (firstTime) {
       const localStorage = getLocalStorage('carrinho');
@@ -67,14 +69,17 @@ export default function Cards({ name, price, urlImage, id }) {
 
   return (
     <div>
-      <div className="cards">
+      <div className={ flex }>
         <img
           src={ urlImage }
           alt={ name }
-          width="50px"
           data-testid={ `customer_products__img-card-bg-image-${id}` }
+          className="image-drink"
         />
-        <h2 data-testid={ `customer_products__element-card-title-${id}` }>
+        <h2
+          className="card-title"
+          data-testid={ `customer_products__element-card-title-${id}` }
+        >
           {name}
         </h2>
         <h3
@@ -82,27 +87,31 @@ export default function Cards({ name, price, urlImage, id }) {
         >
           {price.replace('.', ',')}
         </h3>
-        <button
-          type="button"
-          data-testid={ `customer_products__button-card-add-item-${id}` }
-          onClick={ incrementQtd }
-        >
-          +
-        </button>
-        <input
-          value={ qtdState }
-          type="number"
-          name="quantity"
-          data-testid={ `customer_products__input-card-quantity-${id}` }
-          onChange={ handleChangeQtd }
-        />
-        <button
-          type="button"
-          data-testid={ `customer_products__button-card-rm-item-${id}` }
-          onClick={ decrementQtd }
-        >
-          -
-        </button>
+        <div>
+          <button
+            type="button"
+            data-testid={ `customer_products__button-card-add-item-${id}` }
+            onClick={ incrementQtd }
+            className="btn btn-primary"
+          >
+            +
+          </button>
+          <input
+            value={ qtdState }
+            type="number"
+            name="quantity"
+            data-testid={ `customer_products__input-card-quantity-${id}` }
+            onChange={ handleChangeQtd }
+          />
+          <button
+            type="button"
+            data-testid={ `customer_products__button-card-rm-item-${id}` }
+            onClick={ decrementQtd }
+            className="btn btn-primary"
+          >
+            -
+          </button>
+        </div>
       </div>
     </div>
   );

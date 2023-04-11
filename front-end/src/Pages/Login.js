@@ -72,8 +72,14 @@ function Login() {
   });
 
   return (
-    <div className="login">
-      <h1>Bar da Dona Tereza</h1>
+    <div className="d-flex flex-column align-items-center align-self-center login">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2907/2907457.png"
+        alt="logo de bebidas"
+        width={ 150 }
+        className="login-image"
+      />
+      <h1 clasName="login-child">Bar da Tereza</h1>
       <label htmlFor="email">
         E-mail:
         <input
@@ -81,10 +87,10 @@ function Login() {
           type="email"
           name="email"
           placeholder="Digite seu email"
+          className="rounded login-child"
           onChange={ onChange }
         />
       </label>
-      <br />
       <label htmlFor="password">
         Senha:
         <input
@@ -92,31 +98,32 @@ function Login() {
           type="password"
           name="password"
           placeholder="Digite sua senha"
+          className="rounded login-child"
           onChange={ onChange }
         />
       </label>
-      <br />
-      <button
-        data-testid="common_login__button-login"
-        type="button"
-        disabled={ stateBtn }
-        onClick={ onClickLogin }
-      >
-        Login
-      </button>
-      <br />
-      <button
-        data-testid="common_login__button-register"
-        type="button"
-        onClick={ onClickRegister }
-      >
-        Cadastre-se
-      </button>
-      { errorState && (
-        <h3
-          data-testid="common_login__element-invalid-email"
+      <div className="d-inline-flex">
+        <button
+          data-testid="common_login__button-login"
+          type="button"
+          disabled={ stateBtn }
+          onClick={ onClickLogin }
+          className="login-button btn btn-primary"
         >
-          Tá errado isso aí
+          Login
+        </button>
+        <button
+          data-testid="common_login__button-register"
+          type="button"
+          onClick={ onClickRegister }
+          className="register-button btn btn-info btn-lg"
+        >
+          Cadastre-se
+        </button>
+      </div>
+      { errorState && (
+        <h3 data-testid="common_login__element-invalid-email">
+          E-mail ou senha inválidos
         </h3>)}
     </div>
   );
