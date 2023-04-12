@@ -36,7 +36,7 @@ function CheckoutTable() {
   return (
     <div>
       <h1>Finalizar pedido</h1>
-      <table>
+      <table className="table table-bordered table-hover table-striped">
         <thead>
           <tr>
             <th>Item</th>
@@ -48,9 +48,8 @@ function CheckoutTable() {
           </tr>
         </thead>
         <tbody>
-          {console.log(cartItems)}
           {
-            cartItems?.map((item, index) => (
+            cartItems?.filter((i) => i.quantity !== 0).map((item, index) => (
               <tr key={ index }>
                 <td
                   data-testid={
@@ -96,6 +95,7 @@ function CheckoutTable() {
                     type="button"
                     value={ item.id }
                     onClick={ (ele) => removeItem(ele.target.value) }
+                    className="btn btn-danger"
                   >
                     Remover
                   </button>
@@ -105,7 +105,10 @@ function CheckoutTable() {
           }
         </tbody>
       </table>
-      <p data-testid="customer_checkout__element-order-total-price">
+      <p
+        data-testid="customer_checkout__element-order-total-price"
+        className="total-price"
+      >
         {`${totalPrice}`.replace('.', ',')}
       </p>
     </div>

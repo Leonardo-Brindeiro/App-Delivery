@@ -23,7 +23,7 @@ function NavBar() {
   };
 
   return (
-    <div className="products d-inline-flex navbar">
+    <div className="products d-inline-flex rounded navbar">
       <button
         type="button"
         onClick={ onClickProducts }

@@ -5,7 +5,7 @@ import NavBar from '../Components/NavBar';
 
 function Checkout() {
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center">
       <NavBar />
       <CheckoutTable />
       <CheckoutDetails />

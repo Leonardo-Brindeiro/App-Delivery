@@ -102,6 +102,7 @@ export default function Cards({ name, price, urlImage, id }) {
             name="quantity"
             data-testid={ `customer_products__input-card-quantity-${id}` }
             onChange={ handleChangeQtd }
+            className="border-0 input-qty"
           />
           <button
             type="button"
