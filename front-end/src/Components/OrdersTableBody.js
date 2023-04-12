@@ -3,17 +3,14 @@ import PropTypes from 'prop-types';
 
 function OrdersTableBody({ index, name, quantity, price, subtotal }) {
   return (
-    <table>
-      <thead>
-        <tr />
-      </thead>
+    <table className="table table-bordered table-hover table-striped">
       <tbody>
         <tr>
-
           <td
             data-testid={
               `customer_order_details__element-order-table-item-number-${index}`
             }
+            className="number-item"
           >
             {index + 1}
           </td>
@@ -21,6 +18,7 @@ function OrdersTableBody({ index, name, quantity, price, subtotal }) {
             data-testid={
               `customer_order_details__element-order-table-name-${index}`
             }
+            className="name-item"
           >
             {name}
           </td>
@@ -28,6 +26,7 @@ function OrdersTableBody({ index, name, quantity, price, subtotal }) {
             data-testid={
               `customer_order_details__element-order-table-quantity-${index}`
             }
+            className="qty-item"
           >
             {quantity}
           </td>
@@ -35,6 +34,7 @@ function OrdersTableBody({ index, name, quantity, price, subtotal }) {
             data-testid={
               `customer_order_details__element-order-table-unit-price-${index}`
             }
+            className="price-item"
           >
             {`${price}`.replace('.', ',')}
           </td>

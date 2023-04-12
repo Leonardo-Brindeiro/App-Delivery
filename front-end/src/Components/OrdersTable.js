@@ -41,7 +41,7 @@ function OrdersTable({ id, sellerId, saleDate, status }) {
 
   const dTStatus = 'customer_order_details__element-order-details-label-delivery-status';
   return (
-    <table>
+    <table className="table table-bordered table-hover mt-2">
       <thead>
         <tr>
           <th>id</th>
@@ -75,6 +75,7 @@ function OrdersTable({ id, sellerId, saleDate, status }) {
               disabled={ status !== 'Em Trânsito' }
               data-testid="customer_order_details__button-delivery-check"
               onClick={ handleDeliveryBtn }
+              className="btn btn-success"
             >
               MARCAR COMO ENTREGUE
             </button>

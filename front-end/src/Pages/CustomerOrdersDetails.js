@@ -22,7 +22,7 @@ function CustomerOrdersDetails(props) {
   }, [update3]);
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center">
       <NavBar />
       <OrdersTable
         id={ orders?.id }
@@ -30,7 +30,6 @@ function CustomerOrdersDetails(props) {
         saleDate={ orders?.saleDate }
         status={ orders?.status }
       />
-      { /* Passar os props Id, name, date, status e index atraves de um map */}
       {
         orders?.products?.map((order, index) => (
           <OrdersTableBody
@@ -43,10 +42,9 @@ function CustomerOrdersDetails(props) {
           />
         ))
       }
-      { /* Fazer um map e passar os props Index, quantity, price e subtotal */}
       <h1 data-testid="customer_order_details__element-order-total-price">
         {
-          `Total: R$${orders?.totalPrice}`.replace('.', ',')
+          `Total: R$ ${orders?.totalPrice}`.replace('.', ',')
         }
       </h1>
     </div>

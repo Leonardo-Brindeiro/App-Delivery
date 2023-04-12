@@ -23,18 +23,35 @@ function OrderCard({ id, status, saleDate, totalPrice }) {
   };
 
   return (
-    <Link to={ `/customer/orders/${id}` }>
-      <div>
-        <p data-testid={ `customer_orders__element-order-id-${id}` }>{id}</p>
-        <p data-testid={ `customer_orders__element-delivery-status-id-${id}` }>
+    <Link
+      to={ `/customer/orders/${id}` }
+      className="link rounded"
+    >
+      <div className="d-flex justify-content-between order-card">
+        <p
+          data-testid={ `customer_orders__element-order-id-${id}` }
+          className="order-data"
+        >
+          {id}
+        </p>
+        <p
+          data-testid={ `customer_orders__element-delivery-status-id-${id}` }
+          className="order-data"
+        >
           {status}
         </p>
-        <p data-testid={ `customer_orders__element-order-date-${id}` }>
+        <p
+          data-testid={ `customer_orders__element-order-date-${id}` }
+          className="order-data"
+        >
           {
             formatedDate(saleDate)
           }
         </p>
-        <p data-testid={ `customer_orders__element-card-price-id-${id}` }>
+        <p
+          data-testid={ `customer_orders__element-card-price-id-${id}` }
+          className="order-data"
+        >
           {`${totalPrice}`.replace('.', ',')}
         </p>
       </div>

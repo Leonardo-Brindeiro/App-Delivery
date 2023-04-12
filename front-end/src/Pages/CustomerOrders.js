@@ -21,7 +21,7 @@ function CustomerOrders() {
   }, []);
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center">
       <NavBar />
       {sales.map((sale) => (
         <OrderCard
